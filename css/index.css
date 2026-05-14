@@ -1,0 +1,100 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(white, #ffde59);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navBar{
+    display: flex;
+    width: 100%;
+    height: 75px;
+    margin-bottom: 60px;
+}
+.itens_nav{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 25px;
+
+}
+.paginas{
+    width: 50%;
+    height: 50px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+.item_nav{
+    display: flex;
+    list-style-type: none;
+    font-size: 20px;
+    width: 100px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    transition: transform 1s ease, color 0.3s ease;
+    cursor: pointer;
+}
+.item_nav:hover{
+    transform: translateY(-10px);
+    color: #3D3D3D;
+}
+.image_nav{
+    width: 70px;
+    height: 70px;
+}
+
+.banner{
+    display: flex;
+    width: 100%;
+    height: 20rem;
+    align-items: center;
+    justify-content: center;
+}
+.image_banner{
+    width: 95%;
+    height: 100%;
+}
+.titulo{
+    text-align: center;
+    font-size: 35px;
+}
+.produtos{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    gap: 20%;
+}
+.card_produtos{
+    background-color: aliceblue;
+    border-radius: 20px;
+    margin-top: 50px;
+    transition: transform 1s ease;
+}
+.card_produtos:hover{
+    transform: scale(1.1);
+}
+.image_card{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: -50px;
+}
+.image_card img{
+    width: 60%;
+}
+.titulo_card{
+    text-align: center;
+    font-size: 25px;
+}
