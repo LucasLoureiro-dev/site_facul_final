@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="../css/contato.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,77 +20,84 @@
                         Home
                     </li>
                 </a>
-
-                <a href="./paginas/produtos.html">
+                <a href="./produtos.html">
                     <li class="item_nav">
                         Catalogo
                     </li>
                 </a>
-
-
-                <img src="./img/logo.png" alt="" class="image_nav">
-
-                <a href="./paginas/sobrenos.html">
+                <img src="../img/logo.png" alt="" class="image_nav">
+                <a href="./sobrenos.html">
                     <li class="item_nav">
                         Sobre Nos
                     </li>
                 </a>
-
-                <a href="./paginas/contato.html">
+                <a href="./contato.html">
                     <li class="item_nav">
                         Contato
                     </li>
                 </a>
-
             </div>
         </ul>
     </nav>
 
-    <div class="banner">
-        <img src="./img/Banner.png" alt="" class="image_banner">
-    </div>
+    <main>
+        <ul class="contatos-titulo">
+            <li class="contatos-item">Contatos</li>
+        </ul>
+           <div id="formRetorno" class="divRetorno">
+               <p id="textoRetorno" class="texto-contatos"></p>
+          </div>
+        <div id="formulario">
+             <p class="texto-contatos">
+                 Será uma alegria te atender!
+                 <br><br>
+                 Você pode nos encontrar no Instagram, no Whatsapp ou preencher o formulário abaixo.
+             </p>
+            <form id="frmContato">
+                 <fieldset>
+                     <legend>Dados Pessoais</legend>
+                     <label>* Nome e sobrenome</label>
+                     <input type="text" id="nomesobrenome" name="" class="input-padrao" required>
 
-    <h2 class="titulo">
-        Produtos
-    </h2>
-    <div class="produtos">
-        <div class="card_produtos">
-            <h3 class="titulo_card">
-                Alçapão de Carvalho
-            </h3>
-            <p class="desc_card">
-                Alçapão simples e descreto
-            </p>
-            <p class="preco_card">
-                R$200.00
-            </p>
+                     <label>E-mail</label>
+                     <input type="email" id="email" name="" class="input-padrao" placeholder="seuemail@dominio.com">
+
+                     <label>Telefone</label>
+                     <input type="tel" id="telefone" name="" class="input-padrao" placeholder="(XX) XXXXX-XXXX">
+
+                     <label>* Mensagem</label>
+                     <textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea>
+                     
+                     <label>Como prefere o nosso contato?
+                         <input type="radio" value="radio-mail" name="Contato"> E-mail
+                         <input type="radio" value="radio-telefone" name="Contato"> Telefone
+                         <input type="radio" value="radio-whatsapp" name="Contato"> Whatsapp
+                     </label>
+
+                     <br>
+                     <label>Qual o motivo do seu contato?
+                         <select>
+                             <option>Selecione</option>
+                             <option>Dúvida</option>
+                             <option>Sugestão</option>
+                             <option>Elogio</option>
+                             <option>Reclamação</option>
+                         </select>
+                     </label>
+                     <br>
+                 </fieldset>
+
+                 <label><input type="checkbox" class="chk"> Gostaria de receber nossas novidades por e-mail?</label>
+
+                 <input type="submit" id="enviar" value="Enviar formulário" class="enviar">
+            </form> 
         </div>
-        <div class="card_produtos">
-            <h3 class="titulo_card">
-                Alçapão de Abedo
-            </h3>
-            <p class="desc_card">
-                Alçapão rustico e confiavel
-            </p>
-            <p class="preco_card">
-                R$250.00
-            </p>
-        </div>
-        <div class="card_produtos">
-            <h3 class="titulo_card">
-                Alçapão de Selva
-            </h3>
-            <p class="desc_card">
-                Alçapão robusto
-            </p>
-            <p class="preco_card">
-                R$225.00
-            </p>
-        </div>
-    </div>
+        <script src="../scripts/contato.js"></script>    
+ </main>
+
 
     <footer>
-        <img src="./img/logo.png" alt="" class="image_footer">
+        <img src="../img/logo.png" alt="" class="image_footer">
         <p>contato - <a href="https://wa.me/40028922" target="_blank"><i class="fa-brands fa-whatsapp"></i>(11)
                 4002-8922</a> | <a href="https://www.instagram.com/maxverstappen1/" target="_blank"><i
                     class="fa-brands fa-instagram"></i>@alamautro.alcapoes.oficial.jpeg</a></p>

@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+        function abrirPop(nome, img, descricao) {
+            url = `./pop/popProdutos.html?nomeProduto=${encodeURIComponent(nome)}&imagemProduto=${encodeURIComponent(img)}&descricaoProduto=${descricao}`;
+
+            window.open(url, "_blank", "width=800, heigth=700")
+        }
+
+    </script>
 </head>
 
 <body>
@@ -20,18 +29,18 @@
                         Home
                     </li>
                 </a>
-                <a href="./paginas/produtos.html">
+                <a href="./produtos.html">
                     <li class="item_nav">
                         Catalogo
                     </li>
                 </a>
                 <img src="../img/logo.png" alt="" class="image_nav">
-                <a href="./paginas/sobrenos.html">
+                <a href="./sobrenos.html">
                     <li class="item_nav">
                         Sobre Nos
                     </li>
                 </a>
-                <a href="./paginas/contato.html">
+                <a href="./contato.html">
                     <li class="item_nav">
                         Contato
                     </li>
@@ -47,8 +56,27 @@
     <h2 class="titulo">
         Produtos
     </h2>
+
+    <p class="data">
+        <script type="text/javaScript">
+            diaSemana = new Array("Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sabado");
+            mes =       new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
+            data =      new Date()
+            document.write(diaSemana[data.getDay()] + ", " + data.getDate() + " de " + mes[data.getMonth()] + " de " + data.getFullYear())
+        </script>
+    </p>
+
+    <script>
+        slider1 = ['../../img/alcapoes/alcapao_de_carvalho/alcapao_carvalho.png', '../../img/alcapoes/alcapao_de_carvalho/alcapao_carvalho_aberto.png']
+        slider2 = ['../../img/alcapoes/alcapao_de_abedo/alcapao_de_abedo.png', '../../img/alcapoes/alcapao_de_abedo/alcapao_de_abedo_aberto.png']
+        slider3 = ['../../img/alcapoes/alcapao_de_selva/alcapao_de_selva.png', '../../img/alcapoes/alcapao_de_selva/alcapao_de_selva_aberto.png']
+        slider4 = ['../../img/alcapoes/alcapao_de_ferro/alcapao_de_ferro.png', '../../img/alcapoes/alcapao_de_ferro/alcapao_de_ferro_aberto.png']
+        slider5 = ['../../img/alcapoes/alcapao_de_mangue/alcapao_de_mangue.png', '../../img/alcapoes/alcapao_de_mangue/alcapao_de_mangue_aberto.png']
+        slider6 = ['../../img/alcapoes/alcapao_de_cerejeira/alcapao_de_cerejeira.png', '../../img/alcapoes/alcapao_de_cerejeira/alcapao_de_cerejeira_aberto.png']
+    </script>
+
     <div class="produtos">
-        <div class="card_produtos">
+        <div class="card_produtos" onclick="abrirPop('Alçapão de Carvalho', slider1, 'Alçapão simples e descreto')">
             <h3 class="titulo_card">
                 Alçapão de Carvalho
             </h3>
@@ -56,13 +84,13 @@
                 Alçapão simples e descreto
             </p>
             <p class="desc_card">
-                DE R$200.00 POR 
+                DE R$200.00 POR
             </p>
             <p class="preco_card">
-               R$159.99
+                R$159.99
             </p>
         </div>
-        <div class="card_produtos">
+        <div class="card_produtos" onclick="abrirPop('Alçapão de Abedo', slider2, 'Alçapão rustico e confiavel')">
             <h3 class="titulo_card">
                 Alçapão de Abedo
             </h3>
@@ -73,7 +101,7 @@
                 R$250.00
             </p>
         </div>
-        <div class="card_produtos">
+        <div class="card_produtos" onclick="abrirPop('Alçapão de Selva', slider3, 'Alçapão robusto')">
             <h3 class="titulo_card">
                 Alçapão de Selva
             </h3>
@@ -86,7 +114,7 @@
         </div>
     </div>
     <div class="produtos">
-        <div class="card_produtos1">
+        <div class="card_produtos1" onclick="abrirPop('Alçapão de Ferro', slider4, 'Alçapão resistente e confiavel')">
             <h3 class="titulo_card">
                 Alçapão de Ferro
             </h3>
@@ -97,7 +125,7 @@
                 R$275.00
             </p>
         </div>
-        <div class="card_produtos1">
+        <div class="card_produtos1" onclick="abrirPop('Alçapão de Mangue', slider5, 'Alçapão com boa visibilidade')">
             <h3 class="titulo_card">
                 Alçapão de Mangue
             </h3>
@@ -108,7 +136,7 @@
                 R$200.00
             </p>
         </div>
-        <div class="card_produtos1">
+        <div class="card_produtos1" onclick="abrirPop('Alçapão de Cerejeira', slider6, 'Alçapão elegante')">
             <h3 class="titulo_card">
                 Alçapão de Cerejeira
             </h3>
@@ -121,7 +149,7 @@
         </div>
     </div>
 
-    
+
 
     <footer>
         <img src="../img/logo.png" alt="" class="image_footer">

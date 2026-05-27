@@ -78,6 +78,7 @@ nav a{
     box-shadow: 15px 15px 10px black;
     background-color: #812c2c;
     color: aliceblue;
+    cursor: pointer;
 }
 .card_produtos1{
     background-color: aliceblue;
@@ -89,6 +90,7 @@ nav a{
     box-shadow: 15px 15px 10px black;
     background-color: #812c2c;
     color: aliceblue;
+    cursor: pointer;
 }
 
 .card_produtos:nth-child(1) {

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/pop.css">
+    <title>Document</title>
+
+
+
+</head>
+
+<body>
+    <main>
+        <div class="titulo">
+            <h1 id="Nome-produto"></h1>
+        </div>
+
+        <!-- <img id="img-produto" src="" alt="" class="imagem_legal"> -->
+        <div class="slider">
+            <button type="button" id="prevBtn"> &#10094; </button>
+            <img id="sliderImg" src="../../img/" alt="" class="imagem_legal">
+            <button type="button" id="nextBtn"> &#10095 </button>
+        </div>
+
+        <div class="info_pop">
+            <p id="desc-produto">
+
+            </p>
+            <p>
+                para mais informações contate um de nossos assistentes usando o numero - (11) 4002-8922
+            </p>
+        </div>
+
+        <script>
+
+            function getParans(infoCapturar) {
+                urlParan = new URLSearchParams(window.location.search)
+                return urlParan.get(infoCapturar)
+            }
+
+            document.getElementById("Nome-produto").textContent = getParans("nomeProduto")
+            // document.getElementById("img-produto").src = getParans("imagemProduto")
+            document.getElementById("desc-produto").textContent = getParans("descricaoProduto")
+
+
+            const imagens = getParans("imagemProduto") ? getParans("imagemProduto").split(',') : []
+
+
+            let i = 0
+
+            const sliderImagem = document.getElementById("sliderImg")
+
+            console.log(sliderImagem)
+
+            function mostrarImagens() {
+                if (imagens.length > 0) {
+                    sliderImagem.src = imagens[i]
+                }
+            }
+
+            document.getElementById('prevBtn').onclick = function () {
+                i = (i - 1 + imagens.length) % imagens.length
+                mostrarImagens()
+            }
+
+            document.getElementById('nextBtn').onclick = function () {
+                i = (i + 1) % imagens.length
+                mostrarImagens()
+            }
+
+            mostrarImagens()
+
+        </script>
+
+    </main>
+</body>
+
+</html>
